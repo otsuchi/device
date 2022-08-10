@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['prefix' => 'admin','middleware' => 'auth'], function() {
+    Route::get('home', 'Admin\HomeController@index');
+    Route::get('function', 'Admin\FunctionController@index');
+    Route::get('trable', 'Admin\TrableController@index');
+    Route::get('function/create', 'Admin\FunctionController@add');
+    Route::post('function/create', 'Admin\FunctionController@create');
+    Route::get('trable/create', 'Admin\TrableController@add');
+    Route::post('trable/create', 'Admin\TrableController@create');
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
