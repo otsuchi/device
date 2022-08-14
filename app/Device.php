@@ -11,6 +11,7 @@ class Device extends Model
 
     public static $rules = array(
         'device_id' => 'required',
+        'name' => 'required',
       
     );
 }

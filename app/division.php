@@ -11,6 +11,7 @@ class division extends Model
 
     public static $rules = array(
         'division_id' => 'required',
+        'name' => 'required',
   
     );
 }

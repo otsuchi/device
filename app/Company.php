@@ -10,6 +10,6 @@ class Company extends Model
 
     public static $rules = array(
         'company_id' => 'required',
-       
+        'name' => 'required',
     );
 }

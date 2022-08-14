@@ -14,7 +14,8 @@ class CreateDevicesTable extends Migration
     public function up()
     {
         Schema::create('devices', function (Blueprint $table) {
-            $table->integer('device_id'); // デバイス種類を保存するカラム
+            $table->bigIncrements('id');// デバイスIDを保存するカラム 
+            $table->string('name'); // デバイス名を保存するカラム
         });
     }
 

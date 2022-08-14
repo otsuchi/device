@@ -14,7 +14,8 @@ class CreateDivisionsTable extends Migration
     public function up()
     {
         Schema::create('divisions', function (Blueprint $table) {
-            $table->integer('division_id'); // 区分を保存するカラム
+            $table->bigIncrements('id');// 区分IDを保存するカラム 
+            $table->string('name'); // 区分名を保存するカラム
         });
     }
 

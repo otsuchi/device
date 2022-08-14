@@ -14,7 +14,8 @@ class CreateCompaniesTable extends Migration
     public function up()
     {
         Schema::create('companies', function (Blueprint $table) {
-            $table->integer('company_id'); // メーカー名をを保存するカラム
+            $table->bigIncrements('id');// 会社IDを保存するカラム 
+            $table->string('name'); // 会社名を保存するカラム
         });
     }
 
