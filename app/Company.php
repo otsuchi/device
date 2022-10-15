@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Company extends Model
 {
-    protected $guarded = array('company_id');
-
+    protected $guarded = array('id');
+    public $timestamps = false;
+    
     public static $rules = array(
-        'company_id' => 'required',
+        // 'company_id' => 'required',
         'name' => 'required',
     );
 }

@@ -17,4 +17,18 @@ class Mode extends Model
         'title' => 'required',
         'body' => 'required',
     );
+    public function companies()
+    {
+        return $this->belongsTo('App\Company', 'company_id');
+    }
+    
+    public function devices()
+    {
+        return $this->belongsTo('App\Device', 'device_id');
+    }
+    
+    public function divisions()
+    {
+        return $this->belongsTo('App\Division', 'division_id');
+    }
 }
